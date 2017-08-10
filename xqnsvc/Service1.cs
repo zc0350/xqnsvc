@@ -15,9 +15,12 @@ namespace xqnsvc
 {
     public partial class xqnsvc : ServiceBase
     {
+        /// <summary>
+        /// 为了兼容windows XP or 2003 本版本紧急修正。。。由于现在和未来https 使用sha2 加密算法，XP 和2003 无法很好支持
+        /// </summary>
 
-        const string website = "https://www.xqns.com";
-        const string loginurl = "https://login.xqns.com/login.php";
+        const string website = "http://www.xqns.com";
+        const string loginurl = "http://login.xqns.com/login.php";
         const string sname = "xqnsvc";
         const string fname = "\\xqns.xml";
         string u = "";
